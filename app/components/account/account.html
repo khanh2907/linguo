@@ -1,0 +1,45 @@
+<ion-view view-title="Account">
+  <ion-content>
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">First Name</span>
+        <input type="text" placeholder="John">
+      </label>
+
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Last Name</span>
+        <input type="text" placeholder="Suhr">
+      </label>
+
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Email</span>
+        <input type="text" placeholder="john@suhr.com">
+      </label>
+
+      <label class="item item-input item-stacked-label">
+        <span class="input-label"></span>
+        <input type="text" placeholder="john@suhr.com">
+      </label>
+
+      <div class="item item-divider item-button-right">
+        Known Languages
+        <button class="button button-positive">
+          Modify
+        </button>
+      </div>
+
+      <a ng-repeat="known in languages.known" class="item item-avatar" href="#">
+        <img ng-src="/styles/flag-icon/flags/1x1/{{ ::known.code }}.svg" alt=""/>
+        <h2>{{ ::known.name }}</h2>
+        <p>{{ ::known.level }}</p>
+      </a>
+
+    </div>
+
+    <div class="padding">
+      <button class="button button-full button-positive">
+        Submit
+      </button>
+    </div>
+  </ion-content>
+</ion-view>
