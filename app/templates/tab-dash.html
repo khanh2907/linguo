@@ -1,25 +1,26 @@
 <ion-view view-title="Linguo">
-  <ion-content class="padding">
+  <ion-content class="padding" scroll="false">
 
-    <div on-swipe-right="cardDrag()" class="card">
+    <td-cards>
+      <td-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" class="card-{{$index}}">
 
-      <div class="item item-image">
-        <img src="images/khanh.jpg">
-      </div>
+        <div class="list card">
 
-      <div class="item item-icon-left" href="#">
-        <i class="icon-flag flag-icon-au"></i>
-        Khanh, 21
-        <p>
-          <small>knows English, Vietnamese</small>
-        </p>
-        <p>
-          <small>looking for Japanese</small>
-        </p>
+          <div class="item item-image">
+            <div class="no-text">NOPE</div>
+            <img ng-src="{{card.image}}">
+            <div class="yes-text">LIKE</div>
+          </div>
 
-      </div>
+          <div class="item item-avatar assertive" href="#">
+            <img ng-src="/styles/flag-icon/flags/1x1/{{card.from}}.svg"></img>
+            {{card.name}}, {{card.age}}
+            <p><small>knows {{card.languages.join(', ')}}</small></p>
+          </div>
 
-    </div>
+        </div>
+      </td-card>
+    </td-cards>
 
   </ion-content>
 </ion-view>
