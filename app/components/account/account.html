@@ -21,15 +21,16 @@
         <input type="text" placeholder="john@suhr.com">
       </label>
 
-      <div class="item item-divider item-button-right">
-        Known Languages
-        <button class="button button-positive">
+      <div class="item item-divider">
+        Interest Languages
+        <a href="#/tab/account/language-selection" class="item-note">
           Modify
-        </button>
+        </a>
       </div>
 
       <a ng-repeat="known in languages.known" class="item item-avatar" href="#">
         <img ng-src="/styles/flag-icon/flags/1x1/{{ ::known.code }}.svg" alt=""/>
+
         <h2>{{ ::known.name }}</h2>
         <p>{{ ::known.level }}</p>
       </a>

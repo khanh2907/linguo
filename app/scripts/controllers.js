@@ -13,11 +13,9 @@ angular.module('starter.controllers', ['ionic.contrib.ui.tinderCards'])
     };
 
     $scope.cardSwipedLeft = function(index) {
-    console.log('LEFT SWIPE');
     // $scope.addCard();
   };
   $scope.cardSwipedRight = function(index) {
-    console.log('RIGHT SWIPE');
     // $scope.addCard();
   };
 
