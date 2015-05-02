@@ -29,6 +29,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         // Each state's controller can be found in controllers.js
         $stateProvider
 
+            .state('home', {
+                url: "/",
+                templateUrl: "components/home/home.html"
+            })
+
             // setup an abstract state for the tabs directive
             .state('tab', {
                 url: "/tab",
@@ -78,7 +83,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
                 }
             })
             .state('tab.language-selection', {
-                url: '/account/language-selection',
+                url: '/account/language/:type',
                 views: {
                     'tab-account': {
                         templateUrl: 'components/common/languageSelection/language.selection.html',
@@ -88,6 +93,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
             });
 
         // if none of the above states are matched, use this as the fallback
-        $urlRouterProvider.otherwise('/tab/dash');
+        $urlRouterProvider.otherwise('/');
 
     });

@@ -29,10 +29,25 @@
                 return false;
             };
 
+
+            var searchLanguageByNameFromList = function (languageList, name) {
+                var matchingLanguages = [];
+
+                for (var i = 0; i < languageList.length; i ++) {
+                    if (languageList[i].name.toLowerCase().indexOf(name) !== -1) {
+                        matchingLanguages.push(languageList[i]);
+                    }
+                }
+
+                return matchingLanguages;
+            };
+
+
             return {
                 getLanguages: getLanguages,
                 getLanguageByCode: getLanguageByCode,
-                getLanguageByCodeFromList: getLanguageByCodeFromList
+                getLanguageByCodeFromList: getLanguageByCodeFromList,
+                searchLanguageByNameFromList: searchLanguageByNameFromList
             }
 
         });

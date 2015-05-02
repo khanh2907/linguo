@@ -5,13 +5,19 @@
         <div class="bar bar-header item-input-inset">
             <label class="item-input-wrapper">
                 <i class="icon ion-ios-search placeholder-icon"></i>
-                <input type="search" placeholder="Search">
+                <input type="text" placeholder="Search" ng-model="form.search" ng-change="searchLanguage()">
             </label>
         </div>
 
         <form>
             <ul class="list">
-                <li ng-repeat="language in languages" class="item item-checkbox">
+                <li ng-if="!form.search" ng-repeat="language in languages" class="item item-checkbox">
+                    <label class="checkbox">
+                        <input type="checkbox" ng-model="language.value">
+                    </label>
+                    {{ language.name }}
+                </li>
+                <li ng-if="form.search" ng-repeat="language in languagesSearched" class="item item-checkbox">
                     <label class="checkbox">
                         <input type="checkbox" ng-model="language.value">
                     </label>
@@ -20,7 +26,7 @@
             </ul>
 
             <div class="padding">
-                <button ng-click="update()"class="button button-full button-positive">
+                <button ng-click="update()" class="button button-full button-positive">
                     Update
                 </button>
             </div>

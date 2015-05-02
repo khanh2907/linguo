@@ -17,6 +17,12 @@
                 return languageList.known;
             };
 
+            var setKnownLanguages = function (languages) {
+                languageList.known = languages;
+            };
+
+
+
             var getInterestLanguages = function () {
                 return languageList.interest;
             };
@@ -27,6 +33,7 @@
 
             return {
                 getKnownLanguages: getKnownLanguages,
+                setKnownLanguages: setKnownLanguages,
                 getInterestLanguages: getInterestLanguages,
                 setInterestLanguages: setInterestLanguages
             }

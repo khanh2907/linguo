@@ -10,4 +10,8 @@
             RUSSIAN: {code: 'ru', name: 'Russian', level: 'Intermediate'},
             GERMAN: {code: 'de', name: 'German', level: 'Newbie'}
         })
+        .constant('languageType', {
+            KNOWN: 'known',
+            INTEREST: 'interest'
+        })
 })();
