@@ -1,16 +1,67 @@
 <ion-view view-title="Chats">
-  <ion-content>
-    <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
-        <img ng-src="{{chat.face}}">
-        <h2>{{chat.name}}</h2>
-        <p>{{chat.lastText}}</p>
-        <i class="icon ion-chevron-right icon-accessory"></i>
+    <ion-content class="tab-chat">
 
-        <ion-option-button class="button-assertive" ng-click="remove(chat)">
-          Delete
-        </ion-option-button>
-      </ion-item>
-    </ion-list>
-  </ion-content>
+        <div class="row">
+            <div class="col">
+                <span class="bubble bubble-blue">Hi! My name is Alexa.</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <span class="bubble bubble-blue">I noticed you're interested in improving your French.</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <span class="bubble bubble-blue">I'm happy to assist you if you could help me with my English.</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-right">
+                <span class="bubble bubble-gray">Bonjour! Yes, I'd be very happy to help you with your English.</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-right">
+                <span class="bubble bubble-gray">Qu'est-ce que tu fais ce weekend?</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <span class="bubble bubble-blue">Mh, what is 'qu'est-ce que'?</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-right">
+                <span class="bubble bubble-gray">It means 'what'.</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <span class="bubble bubble-blue">Ha, right, thanks!</span>
+            </div>
+        </div>
+
+
+        <!--<ion-list>-->
+            <!--<ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">-->
+                <!--<img ng-src="{{chat.face}}">-->
+
+                <!--<h2>{{chat.name}}</h2>-->
+
+                <!--<p>{{chat.lastText}}</p>-->
+                <!--<i class="icon ion-chevron-right icon-accessory"></i>-->
+
+                <!--<ion-option-button class="button-assertive" ng-click="remove(chat)">-->
+                    <!--Delete-->
+                <!--</ion-option-button>-->
+            <!--</ion-item>-->
+        <!--</ion-list>-->
+    </ion-content>
 </ion-view>

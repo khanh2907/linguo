@@ -1,7 +1,23 @@
-<ion-view view-title="Linguo">
-    <ion-content class="padding" scroll="false">
+<ion-view view-title="Swap Linguo">
+    <ion-content ng-class="{ 'tab-match': cards.length === 0 }" class="padding" scroll="false">
 
-        <td-cards>
+        <div ng-if="cards.length === 0"
+             class="text-center">
+            <h1 class="">It's a match!</h1>
+
+            <h3>You and Bob can swap lingo now!</h3>
+
+            <div class="row">
+                <div class="col"><img width="100" ng-src="{{ bobImage }}" alt=""/></div>
+                <div class="col"><img width="100" ng-src="{{ myImage }}" /></div>
+            </div>
+
+            <a ng-href="#/tab/chats" class="button button-block button-outline button-calm">
+                Send a message
+            </a>
+        </div>
+
+        <td-cards ng-if="cards.length > 0">
             <td-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)"
                      on-partial-swipe="cardPartialSwipe(amt)" class="card-{{$index}}">
 

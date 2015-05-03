@@ -6,10 +6,10 @@
 
             var languageList = {
                 known: [
-                    languages.FRENCH, languages.ENGLISH, languages.CHINESE
+
                 ],
                 interest: [
-                    languages.JAPANESE, languages.RUSSIAN, languages.GERMAN
+
                 ]
             };
 
